@@ -7,31 +7,61 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="hero">
-    <h1><span class="accent">p5.js</span> 과제</h1>
-    <p class="hero-desc">1–4</p>
-  </header>
+  <div class="page">
+    <header class="hero">
+      <p class="hero-tag">2026 · SSU</p>
+      <h1><span class="accent">p5.js</span> 과제 모음</h1>
+      <p class="hero-desc">정적 2작 · 동적 2작</p>
+    </header>
 
-  <main id="projects">
-    <article class="cell">
-      <span class="cell-label static">1 · 정적</span>
-      <iframe src="sample1/index.html" title="과제 1"></iframe>
-    </article>
+    <main class="gallery">
+      <div class="col-labels">
+        <span>정적</span>
+        <span>동적</span>
+      </div>
 
-    <article class="cell">
-      <span class="cell-label dynamic">4 · 동적</span>
-      <iframe src="sample4/index.html" title="과제 4"></iframe>
-    </article>
+      <div id="projects">
+        <article class="cell" style="--i: 0">
+          <div class="cell-view">
+            <iframe src="sample1/index.html" title="과제 1"></iframe>
+          </div>
+          <div class="cell-caption static">
+            <span class="cell-num">01</span>
+            <span class="cell-name">우주 풍경</span>
+          </div>
+        </article>
 
-    <article class="cell">
-      <span class="cell-label static">2 · 정적</span>
-      <iframe src="sample2/index.html" title="과제 2"></iframe>
-    </article>
+        <article class="cell" style="--i: 1">
+          <div class="cell-view">
+            <iframe src="sample4/index.html" title="과제 4"></iframe>
+          </div>
+          <div class="cell-caption dynamic">
+            <span class="cell-num">04</span>
+            <span class="cell-name">우주 애니메이션</span>
+          </div>
+        </article>
 
-    <article class="cell">
-      <span class="cell-label dynamic">3 · 동적</span>
-      <iframe src="sample3/index.html" title="과제 3"></iframe>
-    </article>
-  </main>
+        <article class="cell" style="--i: 2">
+          <div class="cell-view">
+            <iframe src="sample2/index.html" title="과제 2"></iframe>
+          </div>
+          <div class="cell-caption static">
+            <span class="cell-num">02</span>
+            <span class="cell-name">캐릭터</span>
+          </div>
+        </article>
+
+        <article class="cell" style="--i: 3">
+          <div class="cell-view">
+            <iframe src="sample3/index.html" title="과제 3"></iframe>
+          </div>
+          <div class="cell-caption dynamic">
+            <span class="cell-num">03</span>
+            <span class="cell-name">캐릭터 인터랙션</span>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
