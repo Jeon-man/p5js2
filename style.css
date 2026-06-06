@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600&display=swap");
 
 * {
   margin: 0;
@@ -11,41 +11,37 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  padding: 32px 20px 24px;
+  padding: 40px 20px 32px;
   font-family: "Noto Sans KR", sans-serif;
-  color: #1a1a2e;
+  color: #2d2a32;
   background:
-    radial-gradient(circle at 20% 10%, rgba(99, 102, 241, 0.18), transparent 40%),
-    radial-gradient(circle at 80% 0%, rgba(236, 72, 153, 0.14), transparent 35%),
-    linear-gradient(160deg, #f8fafc 0%, #eef2ff 45%, #fdf2f8 100%);
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(167, 139, 250, 0.12), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(125, 211, 252, 0.1), transparent),
+    #f8f7f5;
 }
 
 .hero {
   text-align: center;
-  margin-bottom: 28px;
-}
-
-.eyebrow {
-  margin-bottom: 8px;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #6366f1;
+  margin-bottom: 32px;
 }
 
 .hero h1 {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 600;
   letter-spacing: -0.02em;
+  color: #3d3a42;
 }
 
-.subtitle {
-  margin-top: 10px;
-  font-size: 0.95rem;
-  color: #64748b;
+.hero h1 .accent {
+  color: #7c6fae;
+}
+
+.hero-desc {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: #a8a3b0;
 }
 
 #projects {
@@ -53,27 +49,27 @@ body {
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
   max-width: 600px;
-  gap: 12px;
+  gap: 14px;
 }
 
 .cell {
   position: relative;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  border: 1px solid rgba(148, 163, 184, 0.35);
-  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 14px;
   background: #fff;
   box-shadow:
-    0 10px 30px rgba(15, 23, 42, 0.08),
-    0 1px 0 rgba(255, 255, 255, 0.8) inset;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+    0 2px 8px rgba(45, 42, 50, 0.05),
+    0 8px 24px rgba(45, 42, 50, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .cell:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow:
-    0 16px 40px rgba(15, 23, 42, 0.12),
-    0 1px 0 rgba(255, 255, 255, 0.8) inset;
+    0 4px 12px rgba(45, 42, 50, 0.07),
+    0 12px 32px rgba(45, 42, 50, 0.06);
 }
 
 .cell-label {
@@ -81,37 +77,23 @@ body {
   top: 10px;
   left: 10px;
   z-index: 2;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(6px);
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(8px);
   pointer-events: none;
 }
 
-.cell-label h2 {
-  font-size: 0.85rem;
-  font-weight: 600;
+.cell-label.static {
+  color: #4a6fa5;
+  background: rgba(219, 234, 254, 0.85);
 }
 
-.badge {
-  padding: 2px 8px;
-  border-radius: 999px;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-}
-
-.badge.static {
-  color: #0369a1;
-  background: #e0f2fe;
-}
-
-.badge.dynamic {
-  color: #be185d;
-  background: #fce7f3;
+.cell-label.dynamic {
+  color: #9d4e6c;
+  background: rgba(252, 231, 243, 0.85);
 }
 
 .cell iframe {
@@ -125,15 +107,9 @@ body {
   transform: scale(0.5);
 }
 
-.footer {
-  margin-top: 28px;
-  font-size: 0.8rem;
-  color: #94a3b8;
-}
-
 @media (max-width: 640px) {
   body {
-    padding-top: 24px;
+    padding-top: 28px;
   }
 
   #projects {
